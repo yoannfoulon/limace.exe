@@ -61,7 +61,14 @@
        <item>
         <widget class="QPushButton" name="pushButton_LB">
          <property name="text">
-          <string>Lissage Laplace-Beltrami</string>
+          <string>Lissage Laplace-Beltrami Cotangentiel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Lissage Laplace-Beltrami Uniforme</string>
          </property>
         </widget>
        </item>

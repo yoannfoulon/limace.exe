@@ -45,12 +45,10 @@ public:
     // les fonctions à compléter
     float faceArea(MyMesh* _mesh, int faceID);
     float baryArea(MyMesh* _mesh, int vertID);
-    float angleFF(MyMesh *_mesh, int faceID0, int faceID1, int vertID0, int vertID1);
-    float angleEE(MyMesh* _mesh, int vertexID, int faceID);
-    void H_Curv(MyMesh* _mesh);
-    void K_Curv(MyMesh* _mesh);
-    OpenMesh::Vec3f LaplaceBeltrami(MyMesh* _mesh, int vertID);
-    void LBAll(MyMesh* _mesh, double h, double lambda);
+    OpenMesh::Vec3f LaplaceBeltramiCot(MyMesh* _mesh, int vertID);
+    OpenMesh::Vec3f LaplaceBeltramiUni(MyMesh* _mesh, int vertID);
+    void LBAllCot(MyMesh* _mesh, double h, double lambda);
+    void LBAllUni(MyMesh* _mesh, double h, double lambda);
     void matriceLB(MyMesh* _mesh);
     float cot(float angle);
 
@@ -67,6 +65,8 @@ private slots:
     void on_lambda_valueChanged(double arg1);
 
     void on_pushButton_mat_clicked();
+
+    void on_pushButton_clicked();
 
 private:
 
